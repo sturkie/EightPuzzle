@@ -3,6 +3,38 @@
 
 using namespace std;
 
+void print_expand(int g, int h, vector<int> row1, vector<int> row2, vector<int> row3){
+    cout << "The best state to expand with a g(n) = " << g << " and h(n) = " << h << "is...\n";
+    
+    //print current puzzle
+    cout << "\t";
+   for(int i=0; i < row1.size(); i++){
+       cout << row1.at(i) << ' ';
+   }
+   cout << "\n\t";
+   for(int i=0; i < row2.size(); i++){
+       cout << row2.at(i) << ' ';
+   }
+   cout << "\n\t";
+   for(int i=0; i < row3.size(); i++){
+       cout << row3.at(i) << ' ';
+   }
+    
+    cout << "\tExpanding this node...\n";
+    
+    return;
+}
+
+//essentialy A*
+int general_search_algorithm(vector<vector<int> > puzzle, int heuristic){
+    
+    cout << "Entering GSA\n";
+    
+    
+    return 0;
+}
+
+//A* with h(n) = 0
 int uniform_cost_search(){
     cout << "Uniform Cost Search\n";
     return 0;
@@ -28,15 +60,15 @@ int main(){
     cout << "Enter \"1\" to use a default puzzle, or enter \"2\" to enter your own puzzle: ";
     
     cin >> puzzle_choice;
-    
+                 
+    vector<int> row1{1,2,3};
+    vector<int> row2{4,8,0};
+    vector<int> row3{7,6,5};
+
     //Create custom puzzle
     if(puzzle_choice ==2){
         
         int input;
-        
-        vector<int> row1;
-        vector<int> row2;
-        vector<int> row3;
         
         cout << "\nEnter your puzzle, use a 0 to represent the blank\n";
         cout << "Enter spaces or tabs between numbers then hit enter\n";
@@ -63,21 +95,27 @@ int main(){
             row3.push_back(input);
         }
         
-//Print puzzle test
-//        cout << "\t";
-//        for(int i=0; i < row1.size(); i++){
-//            cout << row1.at(i) << ' ';
-//        }
-//        cout << "\n\t";
-//        for(int i=0; i < row2.size(); i++){
-//            cout << row2.at(i) << ' ';
-//        }
-//        cout << "\n\t";
-//        for(int i=0; i < row3.size(); i++){
-//            cout << row3.at(i) << ' ';
-//        }
-        
     }
+    
+    vector<vector<int>> puzzle;
+    puzzle.push_back(row1);
+    puzzle.push_back(row2);
+    puzzle.push_back(row3);
+
+    
+//    //Print puzzle test
+//    cout << "\t";
+//    for(int i=0; i < row1.size(); i++){
+//        cout << row1.at(i) << ' ';
+//    }
+//    cout << "\n\t";
+//    for(int i=0; i < row2.size(); i++){
+//        cout << row2.at(i) << ' ';
+//    }
+//    cout << "\n\t";
+//    for(int i=0; i < row3.size(); i++){
+//        cout << row3.at(i) << ' ';
+//    }
     
     cout << "\nEnter your choice of algorithm: " << endl;
     cout << "\t1. Uniform Cost Search\n";
@@ -102,6 +140,8 @@ int main(){
         manhattan_distance();
     }
     
+//    cout << "Calling print_expand\n";
+//    print_expand(1,2,row1,row2,row3);
     
     //Done
     cout << "Goal!!!\n";
