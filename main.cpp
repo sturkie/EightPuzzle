@@ -3,6 +3,21 @@
 
 using namespace std;
 
+struct node{
+    int h;
+    int g;
+    node* next_node;
+};
+
+struct tree{
+    node* root;
+};
+
+//operator functions
+void move_left(node* n){
+    return;
+}
+
 void print_expand(int g, int h, vector<int> row1, vector<int> row2, vector<int> row3){
     cout << "The best state to expand with a g(n) = " << g << " and h(n) = " << h << "is...\n";
     
