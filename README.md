@@ -19,11 +19,20 @@ Each algorithm solves with the A* algorithm with their own heuristic value. The 
 * The number of expanded nodes, maximum number of nodes ever present in the queue at one time, and the depth of the solution are printed
 * Duplicates are not accounted for in this program
 ### Uniform Cost Search
+* Heuristic value h(n) is always equal to 0
+* There is never a calculation for the algorithm on potentially shorter paths to the solution
+* This algorithm expands through several nodes without any "educated" guesses on where to expand next and causes a long runtime depending on the depth to the solution
+* Each path costs the same and the search never accounts for the end state
 ### Misplaced Tile Search
+* Heuristic value h(n) is the total number of tiles that are not in their correct position in relation to the goal state
+* The current board is compared to the solved board to calculate this total
 ### Manhattan Distance Search
+* Heuristic value h(n) is the sum of all displacement values
+* The displacement value is the difference between the tile's current position and its solved position
 ## Comparisons
 ## Conclusion
 ## Resources
 The lecture slides created by Dr. Keogh, "Blind Search", "Heuristic Search", and "Eigh Puzzle Briefing and Review of Search", were consulted in the development of this project. Additional research on priority queues.
 ## Known Issues and Bugs
-* This program faces runtime issues on depths 4 and up.
+* This program faces runtime issues on depths 4 and up
+* It is only able to calculate up to depth 8 as there are memory problems on the machine used
