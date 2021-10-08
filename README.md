@@ -32,7 +32,7 @@ Each algorithm solves with the A* algorithm with their own heuristic value. The 
 ## Comparisons
 ## Conclusion
 ## Resources
-The lecture slides created by Dr. Keogh, "Blind Search", "Heuristic Search", and "Eigh Puzzle Briefing and Review of Search", were consulted in the development of this project. Additional research on priority queues.
+The lecture slides created by Dr. Keogh, "Blind Search", "Heuristic Search", and "Eight Puzzle Briefing and Review of Search", were consulted in the development of this project. Additional research on priority queues.
 ## Known Issues and Bugs
 * This program faces runtime issues on depths 4 and up
 * It is only able to calculate up to depth 8 as there are memory problems on the machine used
