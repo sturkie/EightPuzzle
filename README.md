@@ -1,5 +1,5 @@
 # The Eight Puzzle
-#### Project for Introduction to Artifical Intelligence (CS170 at UC Riverside)
+#### Project for Introduction to Artifical Intelligence
 #### Created by Sarah Sturkie
 
 ## Introduction
