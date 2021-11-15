@@ -1,5 +1,5 @@
 # The Eight Puzzle
-#### Project for Introduction to Artifical Intelligence
+#### Project for Introduction to Artificial Intelligence
 #### Created by Sarah Sturkie
 
 ## Introduction
